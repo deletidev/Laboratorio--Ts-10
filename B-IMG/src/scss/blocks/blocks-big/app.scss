@@ -1,0 +1,14 @@
+@use '../../mixins/responsive.scss' as *;
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 106rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsive(106rem) {
+    border-left: var(--border);
+    border-right: var(--border);
+  }
+}

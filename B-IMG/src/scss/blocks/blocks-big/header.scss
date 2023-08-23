@@ -1,0 +1,17 @@
+@use '../../mixins/responsive.scss' as *;
+
+header {
+  width: 100%;
+}
+h1 {
+  font-family: var(--ff-title);
+  text-transform: uppercase;
+  font-size: clamp(1.9rem, 1.9vw + 1.56rem, 4rem);
+  width: 100%;
+  border-bottom: var(--border);
+  text-align: center;
+  padding: 1.2rem;
+  @include responsive(laptop) {
+    padding: 1.6rem;
+  }
+}

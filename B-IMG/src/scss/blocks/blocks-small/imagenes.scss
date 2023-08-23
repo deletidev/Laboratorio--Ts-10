@@ -1,0 +1,60 @@
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
+
+.imagenes {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include responsive(laptop) {
+    border-left: var(--border);
+  }
+  &__up {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    @include responsive(laptop) {
+      border-top: none;
+      padding: 1.2rem;
+      padding-left: 3rem;
+    }
+  }
+  &__down {
+    font-family: var(--ff-title);
+    font-size: 1.2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    text-align: right;
+    @include responsive(laptop) {
+      border-bottom: none;
+      padding: 1.2rem;
+      padding-right: 3rem;
+    }
+  }
+  &__pop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    &[data-state='off'] {
+      z-index: -1;
+      opacity: 0;
+    }
+    &[data-state='active'] {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+  &__copy {
+    background-color: hsl(280, 68%, 97%);
+    padding: 3rem;
+    border: var(--border);
+  }
+}

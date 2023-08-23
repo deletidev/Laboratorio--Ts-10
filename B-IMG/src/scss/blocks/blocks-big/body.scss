@@ -1,0 +1,31 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  animation: page 1s ease-in-out;
+  font-family: var(--ff-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.68) 0%,
+      rgba(255, 255, 255, 0.68) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(246, 254, 154, 0.9) 0%,
+      rgba(215, 143, 221, 0.43) 100%
+    );
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+@keyframes page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

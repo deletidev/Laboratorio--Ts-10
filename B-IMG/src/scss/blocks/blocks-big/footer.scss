@@ -1,0 +1,27 @@
+@use '../../mixins/responsive.scss' as *;
+
+.footer {
+  background-color: black;
+  padding: 1rem;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include responsive(laptop) {
+    padding: 1.2rem;
+  }
+  &__pills {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    gap: 5px;
+  }
+  &__pill {
+    background-color: white;
+    border-radius: 100px;
+    width: fit-content;
+    padding: 0.3rem 0.8rem;
+    font-size: 14px;
+  }
+}

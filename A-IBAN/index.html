@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leer IBAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <h1>Obtener informacion de un IBAN de España</h1>
+      <form id="search-form" role="search" class="search-form">
+        <div class="search-form__text">
+          <input
+            type="search"
+            name="search-input"
+            id="search-input"
+            class="search-form__input"
+            placeholder="Introduzca el IBAN..."
+            aria-placeholder="Introduzca el IBAN"
+          />
+          <button
+            type="submit"
+            class="search-form__btn"
+            aria-label="buscar"
+            title="buscar"
+          >
+            <img src="./public/search.svg" alt="" />
+          </button>
+        </div>
+        <p class="search-form__val" data-valida="error"></p>
+      </form>
+      <div id="result"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
